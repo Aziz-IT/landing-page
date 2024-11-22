@@ -6,6 +6,8 @@
 * License: https://bootstrapmade.com/license/
 */
 
+
+
 (function() {
   "use strict";
 
@@ -45,6 +47,22 @@
     });
 
   });
+
+  /**
+   * Init typed.js
+   */
+const selectTyped = document.querySelector('.typed');
+if (selectTyped) {
+  let typed_strings = selectTyped.getAttribute('data-typed-items');
+  typed_strings = typed_strings.split(',');
+  new Typed('.typed', {
+    strings: typed_strings,
+    loop: true,
+    typeSpeed: 70,
+    backSpeed: 50,
+    backDelay: 1000
+  });
+}
 
   /**
    * Toggle mobile nav dropdowns
